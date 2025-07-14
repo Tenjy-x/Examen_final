@@ -42,15 +42,15 @@ INSERT INTO Exam_Membres (nom, date_naissance, email, ville, genre, mdp, image_m
 ('Bob Martin', '1985-11-23', 'bob.martin@email.com', 'Lyon', 'Homme', 'password2', 'bob.jpg'),
 ('Claire Petit', '1992-03-08', 'claire.petit@email.com', 'Marseille', 'Femme', 'password3', 'claire.jpg'),
 ('David Moreau', '1988-07-19', 'david.moreau@email.com', 'Toulouse', 'Homme', 'password4', 'david.jpg');
--- Insertion de 4 catégories
+
 INSERT INTO Exam_Categorie_Objet (nom_categorie) VALUES
 ('esthetique'),
 ('bricolqge'),
 ('mecqnique'),
 ('cuisine');
--- Insertion de 10 objets par membre (40 objets au total)
+
 INSERT INTO Exam_Objet (nom_objet, id_membre, id_categorie) VALUES
--- Objets pour Alice Dupont (id_membre = 1)
+
 ('Rouge à lèvres', 1, 1),
 ('Perceuse', 1, 2),
 ('Tournevis', 1, 2),
@@ -61,7 +61,7 @@ INSERT INTO Exam_Objet (nom_objet, id_membre, id_categorie) VALUES
 ('Mascara', 1, 1),
 ('Fouet', 1, 4),
 ('Pinceau', 1, 1),
--- Objets pour Bob Martin (id_membre = 2)
+
 ('Scie', 2, 2),
 ('Tournevis électrique', 2, 2),
 ('Pompe à vélo', 2, 3),
@@ -72,7 +72,7 @@ INSERT INTO Exam_Objet (nom_objet, id_membre, id_categorie) VALUES
 ('Vernis', 2, 1),
 ('Spatule', 2, 4),
 ('Pinceau mural', 2, 2),
--- Objets pour Claire Petit (id_membre = 3)
+
 ('Lime à ongles', 3, 1),
 ('Perceuse à colonne', 3, 2),
 ('Tournevis plat', 3, 2),
@@ -83,7 +83,7 @@ INSERT INTO Exam_Objet (nom_objet, id_membre, id_categorie) VALUES
 ('Mascara waterproof', 3, 1),
 ('Fouet électrique', 3, 4),
 ('Pinceau blush', 3, 1),
--- Objets pour David Moreau (id_membre = 4)
+
 ('Scie sauteuse', 4, 2),
 ('Tournevis cruciforme', 4, 2),
 ('Pompe à main', 4, 3),

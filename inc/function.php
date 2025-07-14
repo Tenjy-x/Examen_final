@@ -5,3 +5,10 @@
         $result = mysqli_query($bdd, $sql);
         return $result;
     }
+
+    function liste_objet($bdd, $id_membres){
+        $sql = "SELECT * FROM Exam_Objet JOIN Exam_Membres ON Exam_Objet.id_membre = Exam_Membres.id_membre WHERE Exam_Membres.id_membre = '$id_membres'";
+        echo $sql;
+        $result = mysqli_query($bdd, $sql);
+        return $result;
+    }
