@@ -22,6 +22,7 @@
     function fiche_objet($bdd, $id_objet){
         $sql = "SELECT * FROM Exam_Objet JOIN Exam_Image_Objet ON Exam_Image_Objet.id_objet = Exam_Objet.id_objet WHERE Exam_Objet.id_objet = '$id_objet'";
         $result = mysqli_query($bdd, $sql);
-        return $result;
+        $donnes = mysqli_fetch_assoc($result);
+        return $donnes;
     }
 }
