@@ -35,48 +35,6 @@
           </div>
         </div>
       </nav>
-      <!-- <header class="text-end mb-4">
-        <button class="btn btn-outline-primary shadow-sm" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-          <span class="fs-5">🔍 SEARCH</span>
-        </button>
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-          <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasRightLabel">Search</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-          </div>
-          <div class="offcanvas-body">
-            <div class="row justify-content-center">
-              <div class="col-12 col-md-10 col-lg-8">
-                <div class="card shadow border-0 rounded-4 p-4">
-                  <form action="traitement_recherche.php" method="get">
-                    <input type="hidden" name="numero" value="1">
-                    <h5 class="mb-3 text-primary">Department</h5>
-                    <select name="department" id="department" class="form-select form-select-lg mb-3 rounded-3" aria-label=".form-select-lg example">
-                      <option value="">None</option>
-                      <?php while ($data = mysqli_fetch_assoc($donnes)) {?>
-                        <option value="<?php echo $data['dept_no']?>"><?php echo $data['dept_name']?></option>
-                      <?php }?>
-                    </select>
-                    <h5 class="mb-3 text-primary">Name Of Employees</h5>
-                    <input type="text" name="Employees_name" class="form-control form-control-lg mb-3 rounded-3" placeholder="Name">
-                    <div class="row g-3 mb-3">
-                      <div class="col-md-6">
-                        <label class="form-label">Age min</label>
-                        <input type="number" name="age_min" class="form-control rounded-3" min="0" placeholder="Min">
-                      </div>
-                      <div class="col-md-6">
-                        <label class="form-label">Age max</label>
-                        <input type="number" name="age_max" class="form-control rounded-3" min="0" placeholder="Max">
-                      </div>
-                    </div>
-                    <button type="submit" class="btn btn-primary w-100 rounded-3 shadow">Rechercher</button>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </header> -->
       <?php 
         $page = $_GET['page'];
         include($page.".php");      

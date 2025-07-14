@@ -1,3 +1,3 @@
 <?php
-    header('Location: ./pages/modal.php?page=accueil');
+    header('Location: ./pages/modal.php?page=login');
 ?>

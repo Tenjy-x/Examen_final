@@ -4,7 +4,8 @@ CREATE TABLE Exam_Membres(
     date_naissance DATE,
     email VARCHAR(100),
     ville VARCHAR(50),
-    mdp PASSWORD,
+    genre VARCHAR(20),
+    mdp VARCHAR(100),
     image_membre VARCHAR(100)
 );
 
@@ -36,12 +37,11 @@ CREATE TABLE Exam_Emprunt(
     date_emprunt DATE,
     date_retour DATE
 );
--- Insertion de 4 membres
-INSERT INTO Exam_Membres (nom, date_naissance, email, ville, mdp, image_membre) VALUES
-('Alice Dupont', '1990-05-12', 'alice.dupont@email.com', 'Paris', 'password1', 'alice.jpg'),
-('Bob Martin', '1985-11-23', 'bob.martin@email.com', 'Lyon', 'password2', 'bob.jpg'),
-('Claire Petit', '1992-03-08', 'claire.petit@email.com', 'Marseille', 'password3', 'claire.jpg'),
-('David Moreau', '1988-07-19', 'david.moreau@email.com', 'Toulouse', 'password4', 'david.jpg');
+INSERT INTO Exam_Membres (nom, date_naissance, email, ville, genre, mdp, image_membre) VALUES
+('Alice Dupont', '1990-05-12', 'alice.dupont@email.com', 'Paris', 'Femme', 'password1', 'alice.jpg'),
+('Bob Martin', '1985-11-23', 'bob.martin@email.com', 'Lyon', 'Homme', 'password2', 'bob.jpg'),
+('Claire Petit', '1992-03-08', 'claire.petit@email.com', 'Marseille', 'Femme', 'password3', 'claire.jpg'),
+('David Moreau', '1988-07-19', 'david.moreau@email.com', 'Toulouse', 'Homme', 'password4', 'david.jpg');
 -- Insertion de 4 catégories
 INSERT INTO Exam_Categorie_Objet (nom_categorie) VALUES
 ('esthetique'),
