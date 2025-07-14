@@ -6,9 +6,16 @@
         return $result;
     }
 
-    function liste_objet($bdd, $id_membres){
-        $sql = "SELECT * FROM Exam_Objet JOIN Exam_Membres ON Exam_Objet.id_membre = Exam_Membres.id_membre WHERE Exam_Membres.id_membre = '$id_membres'";
-        echo $sql;
-        $result = mysqli_query($bdd, $sql);
-        return $result;
+    function liste_objets_et_emprunts($bdd, $id_membre) {
+    $sql = "SELECT o.nom_objet, o.id_objet, e.date_retour
+            FROM Exam_Objet o
+            LEFT JOIN Exam_Emprunt e ON o.id_objet = e.id_objet
+            WHERE o.id_membre = '$id_membre'";
+    // echo $sql;
+    $result = mysqli_query($bdd, $sql);
+    $liste = [];
+    while ($row = mysqli_fetch_assoc($result)) {
+        $liste[] = $row;
     }
+    return $liste;
+}
